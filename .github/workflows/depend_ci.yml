@@ -9,19 +9,19 @@ jobs:
     - name: job1 steps
       run: date
   job2:
-    name: job using ubuntu
+    name: job using windows
     runs-on: windows-latest
     steps:
     - name: job2 steps
       run: date
   job3:
-    name: job using ubuntu
+    name: job using mac
     runs-on: macos-latest
     steps:
     - name: job3 steps
       run: date
   job4:
-    name: job using ubuntu
+    name: job using ubuntu-22
     runs-on: ubuntu-22.04
     needs: [job1, job2, job3]
     steps:
