@@ -14,3 +14,6 @@ Steps:
 - Steps run as processes on the compute resource.
 - Steps can run commands or actions.
 - Steps are arrays.
+
+Adding Dependencies:
+- needs: Identifies one or more jobs that must complete successfully before a job will run.

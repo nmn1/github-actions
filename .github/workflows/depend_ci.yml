@@ -1,0 +1,29 @@
+name: Concept of depedencies
+on: push
+
+jobs:
+  job1:
+    name: job using ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - name: job1 steps
+      run: date
+  job2:
+    name: job using ubuntu
+    runs-on: windows-latest
+    steps:
+    - name: job2 steps
+      run: date
+  job3:
+    name: job using ubuntu
+    runs-on: macos-latest
+    steps:
+    - name: job3 steps
+      run: date
+  job4:
+    name: job using ubuntu
+    runs-on: ubuntu-22.04
+    needs: [job1, job2, job3]
+    steps:
+      - name: job4 steps
+        run: date
